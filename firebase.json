@@ -2,7 +2,7 @@
   "database": {
     "rules": "database.rules.json"
   },
-  "hosting": {
+  "hosting": [ {
     "site": "jmelchorp-bootstrap",
     "public": "dist/af-bootstrap",
     "ignore": [
@@ -13,8 +13,50 @@
     "rewrites": [
       {
         "source": "**",
-        "destination": "/index.html"
+        "destination": "dist/af-bootstrap/index.html"
       }
     ]
-  }
+  },{
+    "site": "jmelchorp-layout",
+    "public": "dist/af-layout",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "dist/af-layout/index.html"
+      }
+    ]
+  },{
+    "site": "jmelchorp-covid",
+    "public": "dist/af-covid",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "dist/af-covid/index.html"
+      }
+    ]
+  },{
+    "site": "jmelchorp-material",
+    "public": "dist/af-material",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "dist/af-material/index.html"
+      }
+    ]
+  }]
 }
