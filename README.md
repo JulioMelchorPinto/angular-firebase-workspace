@@ -1,27 +1,39 @@
-# JulioMelchorPortfolio
+# Angular 9 workspace
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.3.
+This repository contains a full **Angular 9** workspace with 4 web applications deployed on **Firebase**. The main propose of this project is to develop a website for exposing and share personal work portfolio as a front-end developer.
 
-## Development server
+# Table of Contents
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+ 1. Description
+ 2. Prerequisites
+ 3. Quick start
+ 4. Quick demo
+ 
+## Description
+The workspace contains 4 main projects:
+### af-layout
+Angular 9 project layout implementation
+### af-bootstrap
+A af-layout implementation with bootstrap 4.4.1
+### af-material
+### af-covid
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Prerequisites
+Be sure you have [Node.js](https://nodejs.org/) with [NPM](https://www.npmjs.com/) installed. You can check by typing on your terminal the following command:
 
-## Build
+    node —v
+    npm -v
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Install global tools:
 
-## Running unit tests
+    npm install -g @angular/cli firebase
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+npm install
+## Quick start
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+1. Restore libraries
 
-## Further help
+### 
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

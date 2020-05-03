@@ -2,5 +2,504 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "projects",
-  "projects": {}
+  "projects": {
+    "af-layout": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/af-layout",
+      "sourceRoot": "projects/af-layout/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/af-layout",
+            "index": "projects/af-layout/src/index.html",
+            "main": "projects/af-layout/src/main.ts",
+            "polyfills": "projects/af-layout/src/polyfills.ts",
+            "tsConfig": "projects/af-layout/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/af-layout/src/favicon.ico",
+              "projects/af-layout/src/assets"
+            ],
+            "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "projects/af-layout/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/af-layout/src/environments/environment.ts",
+                  "with": "projects/af-layout/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "af-layout:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "af-layout:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "af-layout:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/af-layout/src/test.ts",
+            "polyfills": "projects/af-layout/src/polyfills.ts",
+            "tsConfig": "projects/af-layout/tsconfig.spec.json",
+            "karmaConfig": "projects/af-layout/karma.conf.js",
+            "assets": [
+              "projects/af-layout/src/favicon.ico",
+              "projects/af-layout/src/assets"
+            ],
+            "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "projects/af-layout/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/af-layout/tsconfig.app.json",
+              "projects/af-layout/tsconfig.spec.json",
+              "projects/af-layout/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/af-layout/e2e/protractor.conf.js",
+            "devServerTarget": "af-layout:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "af-layout:serve:production"
+            }
+          }
+        }
+      }
+    },
+    "af-material": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/af-material",
+      "sourceRoot": "projects/af-material/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/af-material",
+            "index": "projects/af-material/src/index.html",
+            "main": "projects/af-material/src/main.ts",
+            "polyfills": "projects/af-material/src/polyfills.ts",
+            "tsConfig": "projects/af-material/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/af-material/src/favicon.ico",
+              "projects/af-material/src/assets"
+            ],
+            "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "projects/af-material/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/af-material/src/environments/environment.ts",
+                  "with": "projects/af-material/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "af-material:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "af-material:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "af-material:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/af-material/src/test.ts",
+            "polyfills": "projects/af-material/src/polyfills.ts",
+            "tsConfig": "projects/af-material/tsconfig.spec.json",
+            "karmaConfig": "projects/af-material/karma.conf.js",
+            "assets": [
+              "projects/af-material/src/favicon.ico",
+              "projects/af-material/src/assets"
+            ],
+            "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "projects/af-material/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/af-material/tsconfig.app.json",
+              "projects/af-material/tsconfig.spec.json",
+              "projects/af-material/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/af-material/e2e/protractor.conf.js",
+            "devServerTarget": "af-material:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "af-material:serve:production"
+            }
+          }
+        }
+      }
+    },
+    "af-covid": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/af-covid",
+      "sourceRoot": "projects/af-covid/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/af-covid",
+            "index": "projects/af-covid/src/index.html",
+            "main": "projects/af-covid/src/main.ts",
+            "polyfills": "projects/af-covid/src/polyfills.ts",
+            "tsConfig": "projects/af-covid/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/af-covid/src/favicon.ico",
+              "projects/af-covid/src/assets"
+            ],
+            "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/purple-green.css",
+              "projects/af-covid/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/af-covid/src/environments/environment.ts",
+                  "with": "projects/af-covid/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "af-covid:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "af-covid:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "af-covid:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/af-covid/src/test.ts",
+            "polyfills": "projects/af-covid/src/polyfills.ts",
+            "tsConfig": "projects/af-covid/tsconfig.spec.json",
+            "karmaConfig": "projects/af-covid/karma.conf.js",
+            "assets": [
+              "projects/af-covid/src/favicon.ico",
+              "projects/af-covid/src/assets"
+            ],
+            "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/purple-green.css",
+              "projects/af-covid/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/af-covid/tsconfig.app.json",
+              "projects/af-covid/tsconfig.spec.json",
+              "projects/af-covid/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/af-covid/e2e/protractor.conf.js",
+            "devServerTarget": "af-covid:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "af-covid:serve:production"
+            }
+          }
+        }
+      }
+    },
+    "af-bootstrap": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/af-bootstrap",
+      "sourceRoot": "projects/af-bootstrap/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/af-bootstrap",
+            "index": "projects/af-bootstrap/src/index.html",
+            "main": "projects/af-bootstrap/src/main.ts",
+            "polyfills": "projects/af-bootstrap/src/polyfills.ts",
+            "tsConfig": "projects/af-bootstrap/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/af-bootstrap/src/assets",
+              "projects/af-bootstrap/src/manifest.webmanifest"
+            ],
+            "styles": [
+              "projects/af-bootstrap/src/assets/scss/bootstrap.scss",
+              "projects/af-bootstrap/src/assets/scss/app.scss",
+              "projects/af-bootstrap/src/assets/scss/icons.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/af-bootstrap/src/environments/environment.ts",
+                  "with": "projects/af-bootstrap/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "af-bootstrap:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "af-bootstrap:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "af-bootstrap:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/af-bootstrap/src/test.ts",
+            "polyfills": "projects/af-bootstrap/src/polyfills.ts",
+            "tsConfig": "projects/af-bootstrap/tsconfig.spec.json",
+            "karmaConfig": "projects/af-bootstrap/karma.conf.js",
+            "assets": [
+              "projects/af-bootstrap/src/favicon.ico",
+              "projects/af-bootstrap/src/assets"
+            ],
+            "styles": [
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
+              "projects/af-bootstrap/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/af-bootstrap/tsconfig.app.json",
+              "projects/af-bootstrap/tsconfig.spec.json",
+              "projects/af-bootstrap/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/af-bootstrap/e2e/protractor.conf.js",
+            "devServerTarget": "af-bootstrap:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "af-bootstrap:serve:production"
+            }
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "analytics": "c0123af0-77d9-42ee-b172-47515f850228"
+  },
+  "defaultProject": "af-bootstrap"
 }

@@ -1,0 +1,34 @@
+{
+  "cases": [
+    {
+      "name": "Julio César Melchor Pinto",
+      "gender": "Male",
+      "age": 36,
+      "address": "2 de abril 222",
+      "city": "Veracruz",
+      "country": "México",
+      "status": "Dead",
+      "id": 1
+    },
+    {
+      "name": "Sonia Patricia Pinto Adelsberger",
+      "gender": "Female",
+      "age": 58,
+      "address": "2 de abril 222",
+      "city": "Veracruz",
+      "country": "México",
+      "status": "Recovered",
+      "id": 2
+    },
+    {
+      "name": "Julio Cesar Melchor Beltran",
+      "gender": "Male",
+      "age": 64,
+      "address": "Paseo Jardin 319",
+      "city": "Veracruz",
+      "country": "México",
+      "status": "Recovered",
+      "id": 3
+    }
+  ]
+}

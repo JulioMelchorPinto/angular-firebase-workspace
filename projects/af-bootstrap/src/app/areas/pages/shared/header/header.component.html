@@ -1,0 +1,56 @@
+<header>
+  <nav class="navbar navbar-expand-md fixed-top navbar-light box-shadow shadow-lg">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <!--<a class="navbar-brand" routerLink="about">
+      <img src="assets/favicon.ico" width="30" height="30" class="d-inline-block align-top" alt="">
+    </a>-->
+    <div class="collapse navbar-collapse" id="navbarToggler">
+      <ul class="navbar-nav mr-auto mt-0">
+        <li class="nav-item" id="dropdown-autoclose" dropdown *ngIf="authService.isLoggedIn">
+          <a class="nav-link dropdown-toggle"
+             role="button"
+             dropdownToggle
+             data-toggle="dropdown" 
+             aria-haspopup="true" 
+             aria-expanded="false"
+             aria-controls="dropdown-autoclose">
+              <img class="rounded-circle" height="30" src="{{(authService.userData.photoURL) ? authService.userData.photoURL : 'assets/images/user-dummy.png'}}">
+          </a>
+          <ul id="dropdown-autoclose" *dropdownMenu class="dropdown-menu"
+          role="menu" aria-labelledby="button-autoclose">
+            <li role="menuitem"><a class="nav-link dropdown-item" routerLink="/account/profile">Profile</a></li>
+            <li role="menuitem"><a class="dropdown-item" (click)="authService.SignOut()" >Logout</a></li>
+          </ul>
+        </li>
+        <li class="nav-item" *ngIf="authService.isLoggedIn==false" >
+          <a role="button" class="nav-link" routerLink="/signin">
+            <img class="rounded-circle" height="30" src="assets/images/user-dummy.png">
+          </a>
+        </li>
+        <li class="nav-item mt-1" id="dropdown-apps" dropdown>
+          <a class="nav-link dropdown-toggle" dropdownToggle
+             data-toggle="dropdown" 
+             aria-haspopup="true" 
+             aria-expanded="false"
+             aria-controls="dropdown-apps">Aplicaciones
+          </a>
+          <ul id="dropdown-apps" *dropdownMenu class="dropdown-menu"
+          role="menu" aria-labelledby="button-apps">
+            <li role="menuitem"><a class="nav-link dropdown-item" routerLink="/coffee">Cafeter&iacute;a</a></li>
+          </ul>
+
+
+        </li>  
+        <li class="nav-item mt-1" ><a role="button" class="nav-link" routerLink="/home">Home</a></li>
+        <li class="nav-item mt-1" ><a role="button" class="nav-link" routerLink="/about">About</a></li>
+      </ul>
+
+      <form class="form-inline">
+        <input class="form-control mr-2" type="search" placeholder="Buscar" aria-label="Buscar">
+        <button class="btn btn-outline-success my-0" type="submit">Buscar</button>
+      </form>
+    </div>
+  </nav>
+</header>

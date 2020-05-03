@@ -1,0 +1,98 @@
+<div class="container pt-3">
+  <div class="row justify-content-sm-center">
+    <div class="col-lg-6 col-md-8 col-sm-10 col-xs-12">
+      <div class="card border-info">
+        <div class="card-header">Login</div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-4 text-center">
+              <img src="assets/images/user-dummy.png" width="130">
+            </div>
+            <div class="col-md-8">
+              <form class="form">
+                <div class="form-group mb-2">
+                  <input type="text" class="form-control" placeholder="Usuario" #userName required>
+                </div>
+                <div class="form-group mb-2">
+                  <input type="password" class="form-control" placeholder="Contraseña" #userPassword required>
+                </div>
+                <!-- Calling SignIn Api from AuthService -->
+                <div class="form-group mb-2">
+                  <input type="button" class="btn btn-primary btn-block" value="Iniciar sesión" (click)="authService.SignIn(userName.value, userPassword.value)">
+                </div>
+                <div class="text-center mb-4">
+                  <a role="button" class="btn btn-link" routerLink="/forgot-password">Olvidaste tu contraseña?</a>
+                </div>
+              </form>
+            </div>
+          </div>
+            <!-- Calling GoogleAuth Api from AuthService -->
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form">
+                <div class="btn-group btn-block" role="group">
+                  <button type="button" class="btn btn-sm btn-outline-danger" (click)="authService.GoogleAuth()">
+                    <i class="fab fa-google-plus-g"></i>
+                  </button>
+                  <button type="button" class="btn btn-sm btn-outline-primary" (click)="authService.FacebookAuth()">
+                    <i class="fab fa-facebook"></i>
+                  </button>
+                  <button type="button" class="btn btn-sm btn-outline-info" (click)="authService.TwitterAuth()">
+                    <i class="fab fa-twitter"></i>
+                  </button>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="text-center">
+                <span>No tienes una cuenta? Reg&iacute;strate <span class="redirect" routerLink="/signup">Aqu&iacute;</span></span>
+              </div>
+          </div>
+          </div>    
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <div class="displayTable">
+  <div class="displayTableCell">
+
+    <div class="authBlock">
+      <h3>Sign In</h3>
+      <div class="formGroup">
+        <input type="text" class="formControl" placeholder="Username" #userName required>
+      </div>
+
+      <div class="formGroup">
+        <input type="password" class="formControl" placeholder="Password" #userPassword required>
+      </div>
+
+      
+      <div class="formGroup">
+        <input type="button" class="btn btnPrimary" value="Log in" (click)="authService.SignIn(userName.value, userPassword.value)">
+      </div>
+
+      <div class="formGroup">
+        <span class="or"><span class="orInner">Or</span></span>
+      </div>
+
+  
+      <div class="formGroup">
+        <button type="button" class="btn googleBtn" (click)="authService.GoogleAuth()">
+          <i class="fab fa-google-plus-g"></i>
+          Log in with Google
+        </button>
+      </div>
+
+      <div class="forgotPassword">
+        <span routerLink="/forgot-password">Forgot Password?</span>
+      </div>
+    </div>
+
+    <div class="redirectToLogin">
+      <span>Don't have an account?<span class="redirect" routerLink="/register-user"> Sign Up</span></span>
+    </div>
+
+  </div>
+</div> -->

@@ -1,0 +1,23 @@
+{
+  "projects": {
+    "default": "julio-melchor-portfolio"
+  },
+  "targets": {
+    "julio-melchor-portfolio": {
+      "hosting": {
+        "af-layout": [
+          "jmelchorp-layout"
+        ],
+        "af-material": [
+          "jmelchorp-material"
+        ],
+        "af-covid": [
+          "jmelchorp-covid"
+        ],
+        "af-bootstrap": [
+          "jmelchorp-bootstrap"
+        ]
+      }
+    }
+  }
+}
