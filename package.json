@@ -10,6 +10,16 @@
     "e2e": "ng e2e",
     "deploy": "firebase deploy"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/juliomelchorpinto/angular-firebase-workspace.git"
+  },
+  "author": {
+    "name": "Julio Cesar Melchor Pinto",
+    "email": "julio.melchor@ciencias.unam.mx",
+    "url": "https://julio-melchor.web.app"
+  },
+
   "private": true,
   "dependencies": {
     "@angular/animations": "^9.1.3",
